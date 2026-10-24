@@ -74,14 +74,16 @@
         }
     </style>
 </head>
-<body class="custom-scrollbar min-h-screen font-sans antialiased selection:bg-cyan-500 selection:text-slate-900">
+<body class="custom-scrollbar min-h-screen font-sans antialiased selection:bg-cyan-500 selection:text-slate-900 relative">
+
+    <div id="form-toast" class="fixed top-5 right-5 z-[100] max-w-sm hidden transition-all duration-300 transform translate-x-full opacity-0 shadow-2xl"></div>
 
     <header class="fixed top-0 left-0 right-0 z-40 glass-panel border-b border-slate-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3 group">
                 <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-cyan-500 to-amber-500 p-[2px] transition-transform group-hover:scale-105">
                     <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-                        <i class="fa-solid font-mono font-bold text-cyan-400 text-sm">ONT</i>
+                        <span class="font-mono font-bold text-cyan-400 text-sm">ONT</span>
                     </div>
                 </div>
                 <div class="flex flex-col">
@@ -98,10 +100,10 @@
             </nav>
 
             <div class="hidden sm:flex items-center gap-3">
-                <a href="https://github.com/ontenio" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-slate-800/80 hover:bg-slate-700 hover:text-cyan-400 flex items-center justify-center transition-all text-slate-300 border border-slate-700/50" title="GitHub">
+                <a href="https://github.com/ontenio" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-slate-800/80 hover:bg-slate-700 hover:text-cyan-400 flex items-center justify-center transition-all text-slate-300 border border-slate-700/50">
                     <i class="fa-brands fa-github text-lg"></i>
                 </a>
-                <a href="https://ontenio.itch.io" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-slate-800/80 hover:bg-rose-500/20 hover:text-rose-400 hover:border-rose-500/40 flex items-center justify-center transition-all text-slate-300 border border-slate-700/50" title="Itch.io">
+                <a href="https://ontenio.itch.io" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-slate-800/80 hover:bg-rose-500/20 hover:text-rose-400 hover:border-rose-500/40 flex items-center justify-center transition-all text-slate-300 border border-slate-700/50">
                     <i class="fa-brands fa-itch-io text-lg"></i>
                 </a>
             </div>
@@ -140,7 +142,7 @@
                 </p>
 
                 <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
-                    Specializing in robust gameplay mechanics, object-oriented system architecture, custom simulation engines, and rapid game jam prototyping. Hover over project cards to preview gameplay loops live.
+                    Specializing in robust gameplay mechanics, object-oriented system architecture, custom simulation engines, and rapid game jam prototyping.
                 </p>
 
                 <div class="pt-4 flex flex-wrap gap-4 items-center">
@@ -245,34 +247,34 @@
                     <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
                         <i class="fa-solid fa-cubes text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Game Engines</h3>
+                    <h3 class="text-xl font-bold text-white">Engines & Architecture</h3>
                 </div>
                 <div class="space-y-4 font-mono text-xs">
                     <div>
                         <div class="flex justify-between mb-1 text-slate-300">
-                            <span>Unity Engine (2D/3D)</span>
-                            <span class="text-indigo-400">Advanced</span>
+                            <span>Unity</span>
+                            <span class="text-indigo-400">95%</span>
                         </div>
                         <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-indigo-500 to-cyan-400 w-[92%]"></div>
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-cyan-400 w-[95%]"></div>
                         </div>
                     </div>
                     <div>
                         <div class="flex justify-between mb-1 text-slate-300">
-                            <span>Godot Engine</span>
-                            <span class="text-indigo-400">Proficient</span>
-                        </div>
-                        <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-indigo-500 to-cyan-400 w-[80%]"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between mb-1 text-slate-300">
-                            <span>GameMaker Studio 2</span>
-                            <span class="text-indigo-400">Proficient</span>
+                            <span>Godot</span>
+                            <span class="text-indigo-400">85%</span>
                         </div>
                         <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
                             <div class="h-full bg-gradient-to-r from-indigo-500 to-cyan-400 w-[85%]"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1 text-slate-300">
+                            <span>GameMaker</span>
+                            <span class="text-indigo-400">80%</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-cyan-400 w-[80%]"></div>
                         </div>
                     </div>
                 </div>
@@ -283,34 +285,34 @@
                     <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
                         <i class="fa-solid fa-terminal text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Programming</h3>
+                    <h3 class="text-xl font-bold text-white">Programming & Art</h3>
                 </div>
                 <div class="space-y-4 font-mono text-xs">
                     <div>
                         <div class="flex justify-between mb-1 text-slate-300">
-                            <span>C# (.NET / Unity API)</span>
-                            <span class="text-cyan-400">Advanced</span>
+                            <span>C#</span>
+                            <span class="text-cyan-400">95%</span>
                         </div>
                         <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-cyan-500 to-amber-400 w-[90%]"></div>
+                            <div class="h-full bg-gradient-to-r from-cyan-500 to-amber-400 w-[95%]"></div>
                         </div>
                     </div>
                     <div>
                         <div class="flex justify-between mb-1 text-slate-300">
-                            <span>GDScript</span>
-                            <span class="text-cyan-400">Proficient</span>
+                            <span>Aseprite</span>
+                            <span class="text-cyan-400">60%</span>
                         </div>
                         <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-cyan-500 to-amber-400 w-[82%]"></div>
+                            <div class="h-full bg-gradient-to-r from-cyan-500 to-amber-400 w-[60%]"></div>
                         </div>
                     </div>
                     <div>
                         <div class="flex justify-between mb-1 text-slate-300">
-                            <span>GML (GameMaker Language)</span>
-                            <span class="text-cyan-400">Proficient</span>
+                            <span>Blender</span>
+                            <span class="text-cyan-400">55%</span>
                         </div>
                         <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-cyan-500 to-amber-400 w-[85%]"></div>
+                            <div class="h-full bg-gradient-to-r from-cyan-500 to-amber-400 w-[55%]"></div>
                         </div>
                     </div>
                 </div>
@@ -324,13 +326,17 @@
                     <h3 class="text-xl font-bold text-white">Core Competencies</h3>
                 </div>
                 <div class="flex flex-wrap gap-2 font-mono text-xs">
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">Unity</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">Godot</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">GameMaker</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">C#</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">GDScript</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">Blender</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">Aseprite</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">UI/UX</span>
                     <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">OOP Architecture</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">Game Feel & Juice</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">3D Grid Placement</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">Autodesk Maya</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">Rapid Game Jam Prototyping</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">Custom Sprites & Audio</span>
-                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">Unity Mediation</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">Game Feel</span>
+                    <span class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">Game Jams</span>
                 </div>
             </div>
         </div>
@@ -342,16 +348,13 @@
                 <div class="relative">
                     <div class="absolute -inset-2 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-3xl blur-lg opacity-20"></div>
                     <div class="relative glass-panel p-8 rounded-2xl border border-slate-700/80 space-y-6">
-                        <div class="w-16 h-16 rounded-2xl bg-indigo-600/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400 text-xl font-mono font-bold">
-                            ont
-                        </div>
                         <h3 class="text-2xl font-bold text-white">Engineering Games with Precision</h3>
                         <p class="text-slate-300 text-sm leading-relaxed">
                             Known online as ontenio. Focused on creating responsive game feel, modular code frameworks, dynamic UI architecture, and seamless audio-visual experiences.
                         </p>
                         <div class="pt-2 border-t border-slate-800 flex items-center gap-4 text-xs font-mono text-slate-400">
                             <span><i class="fa-solid fa-gamepad text-indigo-400 mr-1.5"></i> Indie Developer</span>
-                            <span><i class="fa-solid fa-code text-cyan-400 mr-1.5"></i> C# & GDScript</span>
+                            <span><i class="fa-solid fa-code text-cyan-400 mr-1.5"></i> Code Architect</span>
                         </div>
                     </div>
                 </div>
@@ -364,11 +367,11 @@
                 </h2>
 
                 <p class="text-slate-300 text-base leading-relaxed">
-                    With an extensive background and long-standing presence in the game development industry, I have honed my skills to deliver deeply engaging and polished experiences. My primary focus revolves around the elusive concept of "game feel"—ensuring every interaction is responsive, satisfying, and intuitively connected to the player's inputs.
+                    With an extensive background and long-standing presence in the game development industry, I have honed my skills to deliver deeply engaging and polished experiences. My primary focus revolves around the elusive concept of "game feel" ensuring every interaction is responsive, satisfying, and intuitively connected to the player's inputs.
                 </p>
 
                 <p class="text-slate-300 text-base leading-relaxed">
-                    Beyond writing clean, object-oriented code, I place a massive emphasis on visual and audio harmony. I believe that tight gameplay loops can only reach their full potential when deeply synchronized with impactful sound design and striking visual aesthetics. From complex systems to precise combat mechanics, my goal is to craft cohesive worlds that captivate the senses.
+                    Beyond writing clean, object-oriented code across multiple engines like Unity and Godot, I place a massive emphasis on visual and audio harmony. I believe that tight gameplay loops can only reach their full potential when deeply synchronized with impactful sound design and striking visual aesthetics. From complex systems to precise combat mechanics, my goal is to craft cohesive worlds that captivate the senses.
                 </p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
@@ -422,15 +425,13 @@
                     <span>Send Message to ontenio</span>
                 </button>
             </form>
-
-            <div id="form-toast" class="hidden mt-4 p-4 rounded-xl text-sm text-center font-mono transition-all"></div>
         </div>
     </section>
 
     <footer class="border-t border-slate-800/80 py-10 bg-slate-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-slate-500">
             <div>
-                © 2026 ontenio. All rights reserved.
+                © 2026 ontenio.
             </div>
             <div class="flex items-center gap-6">
                 <a href="https://github.com/ontenio" target="_blank" class="hover:text-cyan-400 transition-colors">GitHub</a>
@@ -445,13 +446,13 @@
             { id: "soren", title: "Project Soren", youtubeId: "w0BLEw1_eHY", link: "https://wildthornstudios.itch.io/soren-the-spirit-guardian", linkText: "itch.io" },
             { id: "founder", title: "FounderSim", youtubeId: "qw1b_cSAOUI", link: null, linkText: "In development" },
             { id: "cranberry", title: "Cranberry Nightmares", youtubeId: "QxSGtJVKlsQ", link: "https://xypes.itch.io/cranberry-nightmares", linkText: "Play Game" },
-            { id: "deus", title: "Deus Arena", youtubeId: "y_ypjeEGCYM", link: "https://magarajam.com/game/1512558624579257344", linkText: "Play Game" },
-            { id: "agent", title: "Agent's Blacklist: Shoot & Catch", youtubeId: "o-FzQXRWEsE", link: "https://xypes.itch.io/agents-blacklist", linkText: "itch.io" },
+            { id: "deus", title: "Deus Arena", youtubeId: "y_ypjeEGCYM", link: "https://magarajam.com/game/1512558624579257344", linkText: "Magara Jam" },
+            { id: "agent", title: "Agent's Blacklist", youtubeId: "o-FzQXRWEsE", link: "https://xypes.itch.io/agents-blacklist", linkText: "itch.io" },
             { id: "glimmer", title: "Glimmer Of Stars", youtubeId: "drVkja34n-w", link: "https://haziq-heartfelt.itch.io/glimmer-of-stars", linkText: "itch.io" },
             { id: "planet", title: "Planet Highway", youtubeId: "HMd4e1TPo44", link: "https://ontenio.itch.io/planet-highway", linkText: "itch.io" },
             { id: "snow", title: "Project Snow", youtubeId: "xVYyZsmW6OA", link: null, linkText: "In development" },
-            { id: "tower", title: "3D-Tower Defence Prototype", youtubeId: "cC32wG9aSc8", link: "https://github.com/ontenio/TowerDefence", linkText: "GitHub" },
-            { id: "platform", title: "Platform-Action Prototype", youtubeId: "u-BjrmCKVsk", link: "https://github.com/ontenio/InvictusPlatformAction", linkText: "GitHub" },
+            { id: "tower", title: "3D-Tower Defence", youtubeId: "cC32wG9aSc8", link: "https://github.com/ontenio/TowerDefence", linkText: "GitHub" },
+            { id: "platform", title: "Platform & Action", youtubeId: "u-BjrmCKVsk", link: "https://github.com/ontenio/InvictusPlatformAction", linkText: "GitHub" },
             { id: "fice", title: "FiCe", youtubeId: "DycrgJDI8qc", link: "https://ontenio.itch.io/fice", linkText: "itch.io" },
             { id: "eaves", title: "Eaves", youtubeId: "vgjzo5X2RPY", link: "https://ontenio.itch.io/eaves", linkText: "itch.io" }
         ];
@@ -500,23 +501,24 @@
                     ? `<a href="${project.link}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs transition-colors flex items-center gap-2 w-fit"><i class="fa-solid fa-play"></i><span>${project.linkText}</span></a>`
                     : `<span class="px-4 py-2 rounded-xl bg-slate-800 text-slate-500 font-semibold text-xs border border-slate-700 flex items-center gap-2 cursor-not-allowed w-fit"><i class="fa-solid fa-lock"></i><span>${project.linkText}</span></span>`;
 
-                const cranberryDetail = project.id === 'cranberry' 
-                    ? `<span class="block mt-2 text-[10px] text-slate-400 font-mono">* Tekno Jam 1st Place</span>` 
-                    : ``;
-
                 return `
-                    <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between group h-full" data-id="${project.id}" data-yt="${project.youtubeId}">
+                    <div class="project-card glass-card rounded-2xl overflow-hidden flex flex-col justify-between group h-full cursor-pointer" data-id="${project.id}" data-yt="${project.youtubeId}">
                         <div class="flex flex-col h-full">
                             <div class="relative h-48 sm:h-52 w-full overflow-hidden border-b border-slate-800 bg-slate-950 flex items-center justify-center shrink-0">
-                                <div class="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-                                    <div id="yt-container-${project.id}" class="w-full h-full pointer-events-none transform scale-150 origin-center"></div>
+                                <img src="https://img.youtube.com/vi/${project.youtubeId}/maxresdefault.jpg" class="absolute inset-0 w-full h-full object-cover z-0" alt="${project.title}">
+                                
+                                <div class="absolute inset-0 w-full h-full pointer-events-none z-10 overflow-hidden">
+                                    <div class="w-full h-full transform scale-[1.05] origin-center">
+                                        <div id="yt-container-${project.id}" class="w-full h-full pointer-events-none origin-center"></div>
+                                    </div>
                                 </div>
-                                <div class="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-900/40 to-slate-900/60 opacity-100 group-hover:opacity-0 transition-opacity z-10 pointer-events-none"></div>
-                                <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center z-20 transition-opacity duration-300 group-hover:opacity-0 pointer-events-none">
-                                    <i class="fa-solid fa-play text-4xl text-white/50 mb-2"></i>
-                                    <span class="text-[11px] font-mono text-white bg-black/50 px-2.5 py-1 rounded-full border border-white/20">
-                                        HOVER TO PLAY
-                                    </span>
+                                
+                                <div class="absolute inset-0 bg-slate-900/40 opacity-100 group-hover:opacity-0 transition-opacity z-20 pointer-events-none"></div>
+                                
+                                <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center z-30 transition-opacity duration-300 group-hover:opacity-0 pointer-events-none">
+                                    <div class="w-14 h-14 rounded-full bg-cyan-500/80 text-white flex items-center justify-center pl-1 shadow-[0_0_20px_rgba(6,182,212,0.6)] backdrop-blur-sm border border-white/20">
+                                        <i class="fa-solid fa-play text-2xl"></i>
+                                    </div>
                                 </div>
                             </div>
                             <div class="p-6 flex flex-col flex-grow justify-between gap-4">
@@ -524,7 +526,6 @@
                                     <h3 class="text-xl font-extrabold text-white group-hover:text-cyan-300 transition-colors">
                                         ${project.title}
                                     </h3>
-                                    ${cranberryDetail}
                                 </div>
                                 <div>
                                     ${actionElement}
@@ -567,6 +568,7 @@
                                 });
                                 card.addEventListener('mouseleave', () => {
                                     event.target.pauseVideo();
+                                    event.target.seekTo(0);
                                 });
                             }
                         }
@@ -577,6 +579,7 @@
                     });
                     card.addEventListener('mouseleave', () => {
                         youtubePlayers[cardId].pauseVideo();
+                        youtubePlayers[cardId].seekTo(0);
                     });
                 }
             });
@@ -589,17 +592,39 @@
         });
 
         const contactFormElement = document.getElementById('contact-form');
+        const notificationToast = document.getElementById('form-toast');
+        let toastTimeout;
+
+        function showToast(message, isSuccess) {
+            notificationToast.textContent = message;
+            notificationToast.className = `fixed top-5 right-5 z-[100] max-w-sm p-4 rounded-xl text-sm font-mono shadow-2xl transition-all duration-300 transform translate-x-full opacity-0 ${isSuccess ? 'bg-emerald-500/90 border border-emerald-400 text-white' : 'bg-rose-500/90 border border-rose-400 text-white'}`;
+            
+            notificationToast.classList.remove('hidden');
+            
+            setTimeout(() => {
+                notificationToast.classList.remove('translate-x-full', 'opacity-0');
+                notificationToast.classList.add('translate-x-0', 'opacity-100');
+            }, 10);
+
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                notificationToast.classList.remove('translate-x-0', 'opacity-100');
+                notificationToast.classList.add('translate-x-full', 'opacity-0');
+                setTimeout(() => {
+                    notificationToast.classList.add('hidden');
+                }, 300);
+            }, 4000);
+        }
+
         if (contactFormElement) {
             contactFormElement.addEventListener('submit', async (event) => {
                 event.preventDefault();
                 
                 const submitButton = document.getElementById('submit-btn');
-                const notificationToast = document.getElementById('form-toast');
                 const formData = new FormData(contactFormElement);
 
                 submitButton.disabled = true;
                 submitButton.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i><span>Sending...</span>';
-                notificationToast.classList.add('hidden');
 
                 try {
                     const response = await fetch(contactFormElement.action, {
@@ -611,24 +636,16 @@
                     });
 
                     if (response.ok) {
-                        submitButton.innerHTML = '<i class="fa-solid fa-check"></i><span>Sent Successfully</span>';
-                        notificationToast.textContent = 'Message sent successfully! I will get back to you soon.';
-                        notificationToast.className = 'mt-4 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-sm text-center font-mono transition-all block';
+                        showToast('Message sent successfully! I will get back to you soon.', true);
                         contactFormElement.reset();
                     } else {
-                        throw new Error('Network response error');
+                        throw new Error('Network error');
                     }
                 } catch (error) {
-                    submitButton.innerHTML = '<i class="fa-solid fa-xmark"></i><span>Send Failed</span>';
-                    notificationToast.textContent = 'Failed to send message. Please check your connection and try again.';
-                    notificationToast.className = 'mt-4 p-4 rounded-xl bg-rose-500/20 border border-rose-500/40 text-rose-300 text-sm text-center font-mono transition-all block';
+                    showToast('Failed to send message. Please check your connection and try again.', false);
                 } finally {
-                    setTimeout(() => {
-                        submitButton.disabled = false;
-                        submitButton.innerHTML = '<i class="fa-solid fa-paper-plane text-sm"></i><span>Send Message to ontenio</span>';
-                        notificationToast.classList.add('hidden');
-                        notificationToast.classList.remove('block');
-                    }, 5000);
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = '<i class="fa-solid fa-paper-plane text-sm"></i><span>Send Message to ontenio</span>';
                 }
             });
         }
